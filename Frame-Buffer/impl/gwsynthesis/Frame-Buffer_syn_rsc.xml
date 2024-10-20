@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="top_display" T_Register="33(0)" T_Alu="27(0)" T_Lut="51(0)">
+ <SubModule name="u_Gowin_rPLL"/>
+ <SubModule name="u_Gowin_CLKDIV"/>
+ <SubModule name="top" Register="3" Lut="29" T_Register="33(3)" T_Alu="27(0)" T_Lut="51(29)">
+  <SubModule name="u_display_cnt" Register="30" Alu="27" Lut="22" T_Register="30(30)" T_Alu="27(27)" T_Lut="22(22)"/>
+ </SubModule>
+</Module>

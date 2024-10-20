@@ -1,0 +1,46 @@
+[
+ {
+  "InstFile" : "/home/muheet/Frame-Buffer/src/vga_top.v",
+  "InstLine" : 2,
+  "InstName" : "top_display",
+  "ModuleFile" : "/home/muheet/Frame-Buffer/src/vga_top.v",
+  "ModuleLine" : 2,
+  "ModuleName" : "top_display",
+  "SubInsts" : [
+   {
+    "InstFile" : "/home/muheet/Frame-Buffer/src/vga_top.v",
+    "InstLine" : 36,
+    "InstName" : "u_Gowin_rPLL",
+    "ModuleFile" : "/home/muheet/Frame-Buffer/Frame-Buffer/src/gowin_rpll/gowin_rpll.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_rPLL"
+   },
+   {
+    "InstFile" : "/home/muheet/Frame-Buffer/src/vga_top.v",
+    "InstLine" : 43,
+    "InstName" : "u_Gowin_CLKDIV",
+    "ModuleFile" : "/home/muheet/Frame-Buffer/Frame-Buffer/src/gowin_clkdiv/gowin_clkdiv.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_CLKDIV"
+   },
+   {
+    "InstFile" : "/home/muheet/Frame-Buffer/src/vga_top.v",
+    "InstLine" : 51,
+    "InstName" : "top",
+    "ModuleFile" : "/home/muheet/Frame-Buffer/src/simple_pattern.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "Simple_pattern",
+    "SubInsts" : [
+     {
+      "InstFile" : "/home/muheet/Frame-Buffer/src/simple_pattern.v",
+      "InstLine" : 25,
+      "InstName" : "u_display_cnt",
+      "ModuleFile" : "/home/muheet/Frame-Buffer/src/display_cnt.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "display_cnt"
+     }
+    ]
+   }
+  ]
+ }
+]

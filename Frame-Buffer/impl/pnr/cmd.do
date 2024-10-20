@@ -1,0 +1,13 @@
+-d /home/muheet/Frame-Buffer/Frame-Buffer/impl/gwsynthesis/Frame-Buffer.vg
+-p GW1NR-9C-QFN88P-6
+-pn GW1NR-LV9QN88PC6/I5
+-cst /home/muheet/Frame-Buffer/constraint/VGA_Display.cst
+-cfg /home/muheet/Frame-Buffer/Frame-Buffer/impl/pnr/device.cfg
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-correct_hold 1
+-route_maxfan 23
+-global_freq 50.000
