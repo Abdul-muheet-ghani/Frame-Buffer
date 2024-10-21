@@ -48,7 +48,7 @@ module top_display(
     );
 
     // Instantiate the Simple_pattern module to generate VGA signals
-    Simple_pattern top(
+    vga_ctrl top(
         .clk25MHz(clk25MHz),  // Input clock signal (25 MHz for VGA timing)
         .o_hsync(o_hsync),    // Output horizontal sync signal
         .o_vsync(o_vsync),    // Output vertical sync signal

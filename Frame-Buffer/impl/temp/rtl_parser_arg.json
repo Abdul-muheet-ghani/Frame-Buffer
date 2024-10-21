@@ -2,10 +2,6 @@
  "Device" : "GW1NR-9C",
  "Files" : [
   {
-   "Path" : "/home/muheet/Frame-Buffer/src/simple_pattern.v",
-   "Type" : "verilog"
-  },
-  {
    "Path" : "/home/muheet/Frame-Buffer/src/vga_top.v",
    "Type" : "verilog"
   },
@@ -19,6 +15,14 @@
   },
   {
    "Path" : "/home/muheet/Frame-Buffer/src/display_cnt.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/muheet/Frame-Buffer/src/draw_pattern.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/muheet/Frame-Buffer/src/vga_ctrl.v",
    "Type" : "verilog"
   }
  ],

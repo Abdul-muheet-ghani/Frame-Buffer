@@ -1,8 +1,8 @@
 module display_cnt(
     input  wire         clk,
 
-    output reg   [9:0]  pos_x,
-    output reg   [9:0]  pos_y,
+    output       [8:0]  pos_x_div,
+    output       [8:0]  pos_y_div,
 
     output              active,
     output              o_hsync,
@@ -15,6 +15,9 @@ module display_cnt(
     // Horizontal and vertical counters to track pixel positions
     reg [9:0] counter_x = 0;  // Horizontal pixel counter (X axis)
     reg [9:0] counter_y = 0;  // Vertical pixel counter (Y axis)
+
+    reg [9:0] pos_x = 0;
+    reg [9:0] pos_y = 0;
 
     // Horizontal pixel counter logic
     always @(posedge clk)  
@@ -66,5 +69,8 @@ module display_cnt(
 
     // Output color signals only within the visible area (defined by pixel ranges)
     assign active =   (counter_x > 144 && counter_x <= 783 && counter_y > 35 && counter_y <= 514);  
+
+    assign pos_x_div = pos_x[9:1];
+    assign pos_y_div = pos_y[9:1];
 
 endmodule

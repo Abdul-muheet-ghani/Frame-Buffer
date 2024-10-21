@@ -1,22 +1,25 @@
 GowinSynthesis start
 Running parser ...
-Analyzing Verilog file '/home/muheet/Frame-Buffer/src/simple_pattern.v'
 Analyzing Verilog file '/home/muheet/Frame-Buffer/src/vga_top.v'
 Analyzing Verilog file '/home/muheet/Frame-Buffer/Frame-Buffer/src/gowin_rpll/gowin_rpll.v'
 Analyzing Verilog file '/home/muheet/Frame-Buffer/Frame-Buffer/src/gowin_clkdiv/gowin_clkdiv.v'
 Analyzing Verilog file '/home/muheet/Frame-Buffer/src/display_cnt.v'
+Analyzing Verilog file '/home/muheet/Frame-Buffer/src/draw_pattern.v'
+Analyzing Verilog file '/home/muheet/Frame-Buffer/src/vga_ctrl.v'
 Compiling module 'top_display'("/home/muheet/Frame-Buffer/src/vga_top.v":2)
 WARN  (EX3791) : Expression size 8 truncated to fit in target size 1("/home/muheet/Frame-Buffer/src/vga_top.v":25)
 WARN  (EX3791) : Expression size 8 truncated to fit in target size 1("/home/muheet/Frame-Buffer/src/vga_top.v":26)
 WARN  (EX3791) : Expression size 8 truncated to fit in target size 1("/home/muheet/Frame-Buffer/src/vga_top.v":27)
 Compiling module 'Gowin_rPLL'("/home/muheet/Frame-Buffer/Frame-Buffer/src/gowin_rpll/gowin_rpll.v":10)
 Compiling module 'Gowin_CLKDIV'("/home/muheet/Frame-Buffer/Frame-Buffer/src/gowin_clkdiv/gowin_clkdiv.v":10)
-Compiling module 'Simple_pattern'("/home/muheet/Frame-Buffer/src/simple_pattern.v":3)
+Compiling module 'vga_ctrl'("/home/muheet/Frame-Buffer/src/vga_ctrl.v":3)
 Compiling module 'display_cnt'("/home/muheet/Frame-Buffer/src/display_cnt.v":1)
-WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("/home/muheet/Frame-Buffer/src/display_cnt.v":24)
 WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("/home/muheet/Frame-Buffer/src/display_cnt.v":27)
-WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("/home/muheet/Frame-Buffer/src/display_cnt.v":46)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("/home/muheet/Frame-Buffer/src/display_cnt.v":30)
 WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("/home/muheet/Frame-Buffer/src/display_cnt.v":49)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("/home/muheet/Frame-Buffer/src/display_cnt.v":52)
+Compiling module 'draw_pattern'("/home/muheet/Frame-Buffer/src/draw_pattern.v":1)
+Extracting RAM for identifier 'bmap'("/home/muheet/Frame-Buffer/src/draw_pattern.v":19)
 WARN  (EX3670) : Actual bit length 8 differs from formal bit length 1 for port 'o_red'("/home/muheet/Frame-Buffer/src/vga_top.v":55)
 WARN  (EX3670) : Actual bit length 8 differs from formal bit length 1 for port 'o_green'("/home/muheet/Frame-Buffer/src/vga_top.v":56)
 WARN  (EX3670) : Actual bit length 8 differs from formal bit length 1 for port 'o_blue'("/home/muheet/Frame-Buffer/src/vga_top.v":57)
