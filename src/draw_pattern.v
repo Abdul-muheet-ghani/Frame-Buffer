@@ -32,48 +32,9 @@ module draw_pattern(
     // Color generation logic: determine pixel color based on the current position
     always @ (posedge clk25MHz)
     begin
-        // Generate a black square (no color) in the center of the screen
-        if (pos_y > 0 && pos_y < 100)
-        begin              
-            r_red <= (pos_x < 8 && pos_y < 8) ? bmap[pos_y-1][pos_x] : 1'b0;    
-            r_blue <= 1'b0;
-            r_green <= 1'b0;
-        end  
-        // Generate blue color in a strip from Y=135 to Y=235
-        else if (pos_y >= 100 && pos_y < 200)
-        begin 
-            r_red <= 1'b0;    
-            r_blue <= 1'b1;
-            r_green <= 1'b0;
-        end 
-        // Generate magenta (red+blue) color in a strip from Y=235 to Y=335
-        else if (pos_y >= 200 && pos_y < 300)
-        begin 
-            r_red <= 1'b1;    
-            r_blue <= 1'b1;
-            r_green <= 1'b0;
-        end  
-        // Generate green color in a strip from Y=335 to Y=435
-        else if (pos_y >= 300 && pos_y < 400)
-        begin
-            r_red <= 1'b0;    
-            r_blue <= 1'b0;
-            r_green <= 1'b1;
-        end  
-        // Generate yellow (red+green) color in a strip from Y=435 to Y=535
-        else if (pos_y >= 400 && pos_y < 500)
-        begin
-            r_red <= 1'b1;    
-            r_blue <= 1'b0;
-            r_green <= 1'b1;    
-        end 
-        // Default to black (no color) outside specified areas
-        else
-        begin
-            r_red <= 1'b0; 
-            r_blue <= 1'b0;
-            r_green <= 1'b0;
-        end 
+        r_red   <= (pos_x < 8 && pos_y < 8) ? bmap[pos_y][pos_x] : 1'b0;    
+        r_blue  <= 1'b0;
+        r_green <= 1'b0;
     end 
 
     // Output color signals only within the visible area (defined by pixel ranges)
