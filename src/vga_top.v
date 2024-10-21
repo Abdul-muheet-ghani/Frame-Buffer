@@ -9,16 +9,24 @@ module top_display(
     output reg b             // Blue color signal output for VGA
 );
 
+    parameter RES_DIV = 1;          //fully parameterized resolution division.
+    parameter RES_X = 640;
+    parameter RTRN_HSYNC = 96;  // HSYNC for next row
+    parameter H_BACK_PORCH  = 48;
+    parameter H_FRONT_PORCH = 16;
+    parameter H_PIXELS = RES_X + RTRN_HSYNC + H_BACK_PORCH + H_FRONT_PORCH;
+
+    parameter RES_Y = 480;
+    parameter RTRN_VSYNC = 2;   // VSYNC for next frame
+    parameter V_BACK_PORCH  = 33;
+    parameter V_FRONT_PORCH = 10;
+    parameter V_PIXELS = RES_Y + RTRN_VSYNC + V_BACK_PORCH + V_FRONT_PORCH;
+
     // Internal wire declarations
     wire o_hsync;            // Horizontal sync signal from Simple_pattern module
     wire o_vsync;            // Vertical sync signal from Simple_pattern module
     wire clk_out, clk25MHz;  // Clock outputs from PLL and clock divider
     wire [7:0] red, green, blue;  // Color signals from Simple_pattern module
-
-    // Unused signals for ball location and drawing (can be used in future extensions)
-    wire [5:0] loc_ball_x;   // X-coordinate of the ball (not used here)
-    wire [5:0] loc_ball_y;   // Y-coordinate of the ball (not used here)
-    wire draw_ball;          // Signal to determine if the ball should be drawn (not used here)
 
     // Always block to update VGA output signals based on internal signals
     always@(*) begin
@@ -48,7 +56,15 @@ module top_display(
     );
 
     // Instantiate the Simple_pattern module to generate VGA signals
-    vga_ctrl top(
+    vga_ctrl #(
+        .RES          (RES_DIV),
+        .H_PIXELS     (H_PIXELS),
+        .V_PIXELS     (V_PIXELS),
+        .RTRN_HSYNC   (RTRN_HSYNC),
+        .RTRN_VSYNC   (RTRN_VSYNC),
+        .H_BACK_PORCH (H_BACK_PORCH),
+        .H_BACK_PORCH (V_BACK_PORCH)
+    ) top (
         .clk25MHz(clk25MHz),  // Input clock signal (25 MHz for VGA timing)
         .o_hsync(o_hsync),    // Output horizontal sync signal
         .o_vsync(o_vsync),    // Output vertical sync signal

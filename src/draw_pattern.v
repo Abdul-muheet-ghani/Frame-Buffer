@@ -1,7 +1,9 @@
-module draw_pattern(
+module draw_pattern#(
+    parameter LOC_WIDTH = 9
+)(
     input clk25MHz,
 
-    input [8:0] pos_x,pos_y,
+    input [LOC_WIDTH-1:0] pos_x,pos_y,
 
     input  active,
 

@@ -1,28 +1,29 @@
 GowinSynthesis start
 Running parser ...
 Analyzing Verilog file '/home/muheet/Frame-Buffer/src/vga_top.v'
+WARN  (EX3598) : Multiple overrides for parameter 'H_BACK_PORCH'("/home/muheet/Frame-Buffer/src/vga_top.v":66)
 Analyzing Verilog file '/home/muheet/Frame-Buffer/Frame-Buffer/src/gowin_rpll/gowin_rpll.v'
 Analyzing Verilog file '/home/muheet/Frame-Buffer/Frame-Buffer/src/gowin_clkdiv/gowin_clkdiv.v'
 Analyzing Verilog file '/home/muheet/Frame-Buffer/src/display_cnt.v'
 Analyzing Verilog file '/home/muheet/Frame-Buffer/src/draw_pattern.v'
 Analyzing Verilog file '/home/muheet/Frame-Buffer/src/vga_ctrl.v'
 Compiling module 'top_display'("/home/muheet/Frame-Buffer/src/vga_top.v":2)
-WARN  (EX3791) : Expression size 8 truncated to fit in target size 1("/home/muheet/Frame-Buffer/src/vga_top.v":25)
-WARN  (EX3791) : Expression size 8 truncated to fit in target size 1("/home/muheet/Frame-Buffer/src/vga_top.v":26)
-WARN  (EX3791) : Expression size 8 truncated to fit in target size 1("/home/muheet/Frame-Buffer/src/vga_top.v":27)
+WARN  (EX3791) : Expression size 8 truncated to fit in target size 1("/home/muheet/Frame-Buffer/src/vga_top.v":33)
+WARN  (EX3791) : Expression size 8 truncated to fit in target size 1("/home/muheet/Frame-Buffer/src/vga_top.v":34)
+WARN  (EX3791) : Expression size 8 truncated to fit in target size 1("/home/muheet/Frame-Buffer/src/vga_top.v":35)
 Compiling module 'Gowin_rPLL'("/home/muheet/Frame-Buffer/Frame-Buffer/src/gowin_rpll/gowin_rpll.v":10)
 Compiling module 'Gowin_CLKDIV'("/home/muheet/Frame-Buffer/Frame-Buffer/src/gowin_clkdiv/gowin_clkdiv.v":10)
-Compiling module 'vga_ctrl'("/home/muheet/Frame-Buffer/src/vga_ctrl.v":3)
-Compiling module 'display_cnt'("/home/muheet/Frame-Buffer/src/display_cnt.v":1)
-WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("/home/muheet/Frame-Buffer/src/display_cnt.v":26)
-WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("/home/muheet/Frame-Buffer/src/display_cnt.v":27)
-WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("/home/muheet/Frame-Buffer/src/display_cnt.v":31)
-WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("/home/muheet/Frame-Buffer/src/display_cnt.v":32)
-Compiling module 'draw_pattern'("/home/muheet/Frame-Buffer/src/draw_pattern.v":1)
-Extracting RAM for identifier 'bmap'("/home/muheet/Frame-Buffer/src/draw_pattern.v":19)
-WARN  (EX3670) : Actual bit length 8 differs from formal bit length 1 for port 'o_red'("/home/muheet/Frame-Buffer/src/vga_top.v":55)
-WARN  (EX3670) : Actual bit length 8 differs from formal bit length 1 for port 'o_green'("/home/muheet/Frame-Buffer/src/vga_top.v":56)
-WARN  (EX3670) : Actual bit length 8 differs from formal bit length 1 for port 'o_blue'("/home/muheet/Frame-Buffer/src/vga_top.v":57)
+Compiling module 'vga_ctrl(RES=1,H_PIXELS=800)'("/home/muheet/Frame-Buffer/src/vga_ctrl.v":3)
+Compiling module 'display_cnt(RES=1,H_PIXELS=800)'("/home/muheet/Frame-Buffer/src/display_cnt.v":1)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("/home/muheet/Frame-Buffer/src/display_cnt.v":38)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("/home/muheet/Frame-Buffer/src/display_cnt.v":39)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("/home/muheet/Frame-Buffer/src/display_cnt.v":43)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("/home/muheet/Frame-Buffer/src/display_cnt.v":44)
+Compiling module 'draw_pattern(LOC_WIDTH=10)'("/home/muheet/Frame-Buffer/src/draw_pattern.v":1)
+Extracting RAM for identifier 'bmap'("/home/muheet/Frame-Buffer/src/draw_pattern.v":21)
+WARN  (EX3670) : Actual bit length 8 differs from formal bit length 1 for port 'o_red'("/home/muheet/Frame-Buffer/src/vga_top.v":71)
+WARN  (EX3670) : Actual bit length 8 differs from formal bit length 1 for port 'o_green'("/home/muheet/Frame-Buffer/src/vga_top.v":72)
+WARN  (EX3670) : Actual bit length 8 differs from formal bit length 1 for port 'o_blue'("/home/muheet/Frame-Buffer/src/vga_top.v":73)
 NOTE  (EX0101) : Current top module is "top_display"
 [5%] Running netlist conversion ...
 Running device independent optimization ...

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top_display" T_Register="41(0)" T_Lut="90(0)">
+<Module name="top_display" T_Register="41(0)" T_Lut="88(0)">
  <SubModule name="u_Gowin_rPLL"/>
  <SubModule name="u_Gowin_CLKDIV"/>
- <SubModule name="top" T_Register="41(0)" T_Lut="90(0)">
+ <SubModule name="top" T_Register="41(0)" T_Lut="88(0)">
   <SubModule name="u_display_cnt" Register="40" Lut="81" T_Register="40(40)" T_Lut="81(81)"/>
-  <SubModule name="u_draw_pattern" Register="1" Lut="9" T_Register="1(1)" T_Lut="9(9)"/>
+  <SubModule name="u_draw_pattern" Register="1" Lut="7" T_Register="1(1)" T_Lut="7(7)"/>
  </SubModule>
 </Module>
